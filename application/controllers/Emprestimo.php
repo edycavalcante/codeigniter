@@ -28,7 +28,10 @@ class Emprestimo extends CI_Controller {
 	// 	$this->cadastro();
 	// }
 	private static $URL_EDITAR= 'emprestimo/editar/';
-	// private static $URL_EXCLUIR= 'emprestimo/excluir/';
+	private static $URL_EXCLUIR= 'emprestimo/excluir/';
+	private static $URL_EXCLUIR1= 'emprestimo/excluir/';
+	private static $URL_EXCLUIR2= 'emprestimo/excluir/';
+	private static $URL_EXCLUIR3= 'emprestimo/excluir/';
 
 	public function __construct(){
 			parent::__construct();
