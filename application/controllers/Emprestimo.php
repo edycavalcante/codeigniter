@@ -29,8 +29,7 @@ class Emprestimo extends CI_Controller {
 	// }
 	private static $URL_EDITAR= 'emprestimo/editar/';
 	private static $URL_EXCLUIR= 'emprestimo/excluir/';
-	private static $URL_EXCLUIR1= 'emprestimo/excluir/';
-	private static $URL_EXCLUIR2= 'emprestimo/excluir/';
+	
 	
 	public function __construct(){
 			parent::__construct();
