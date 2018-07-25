@@ -48,6 +48,33 @@ class Emprestimo_model extends CI_Model {
 
     }
 
+    public function buscar($buscar){
+        $query = $this
+                ->db
+                ->select('*')
+                ->from('emprestimo')
+                ->join('equipamento', 'emprestimo.fk_equipamento_id = equipamento.id_equipamento')->join('setor', 'emprestimo.fk_setor_id = setor.id_setor')
+                ->like('nome_equipamento',$buscar)
+                ->or_like('nome_setor',$buscar)
+                ->or_like('situacao',$buscar)
+                ->or_like('data_fim',$buscar)
+                ->or_like('data_inicio',$buscar)
+                ->or_like('patrimonio',$buscar)
+                ->get();
+     
+
+        if($query->num_rows()>0)
+        {
+            return $query->result(); 
+            
+        }
+        else
+        {
+            return null;
+            
+        }
+    }
+
         
 
 }

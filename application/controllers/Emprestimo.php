@@ -53,7 +53,7 @@ class Emprestimo extends CI_Controller {
 
 		$this->load->helper('form');
 		$this->load->library('form_validation');
-
+		
 		$data['equipamento'] = $this->equipamento_model->get_equipamentos();
 		$data['setor'] = $this->setor_model->get_setors();
  
@@ -194,6 +194,36 @@ class Emprestimo extends CI_Controller {
 
 
 	}
+
+	public function buscar(){
+
+		if(is_null($this->input->get('buscar'))){
+		
+		$this->load->view('template/header.php');
+		$this->load->view('template/menu.php');
+        $this->load->view('emprestimo/buscar_emprestimo.php');  
+        $this->load->view('template/footer.php'); 
+
+	}
+	else{
+		 $data['emprestimo']= $this->emprestimo_model->buscar($this->input->get('buscar'));
+		 // $data['emprestimo']['url_editar']= site_url(self::$URL_EDITAR);
+		 // $data['emprestimo']['url_excluir'] = site_url(self::$URL_EXCLUIR);
+		
+		 // echo '<pre>';
+		 // echo var_dump($data);
+		 // echo '</pre>';
+		 
+
+        
+        $this->load->view('emprestimo/buscar_emprestimo1.php',$data);
+	}
+	}
+
+	
+
+
+
 
 	public function excluir($id){
 

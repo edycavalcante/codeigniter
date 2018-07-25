@@ -51,6 +51,30 @@ class Equipamento_model extends CI_Model {
 
     }
 
+    public function buscar($buscar){
+        $query = $this
+                ->db
+                ->select('*')
+                ->from('equipamento')
+                ->join('fabricante','equipamento.fk_fabricante_id = fabricante.id_fabricante')
+                ->like('nome_equipamento',$buscar)
+                ->or_like('nome_fabricante',$buscar)
+                ->or_like('tipo',$buscar)
+                ->or_like('patrimonio',$buscar)
+                ->get();
+     
+
+        if($query->num_rows()>0)
+        {
+            return $query->result(); 
+            
+        }
+        else
+        {
+            return null;
+            
+        }
+    }
         
 
 }

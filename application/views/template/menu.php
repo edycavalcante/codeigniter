@@ -9,10 +9,6 @@
         <a class="nav-link" href="./usuario/">Inicio</a>
       </li>
       
-      
-      <li class="nav-item">
-        <a class="nav-link" href="">Buscar</a>
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="">Relatório</a>
       </li>
@@ -21,8 +17,9 @@
           Estoque
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/codeigniter/estoque">Cadastrar</a>
-          <a class="dropdown-item" href="/codeigniter/estoque/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>estoque">Cadastrar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>estoque/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>estoque/buscar">Buscar</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -30,8 +27,9 @@
           Empréstimo
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/codeigniter/emprestimo">Cadastrar</a>
-          <a class="dropdown-item" href="/codeigniter/emprestimo/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>emprestimo">Cadastrar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>emprestimo/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>emprestimo/buscar">Buscar</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -39,8 +37,9 @@
           Equipamento
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/codeigniter/equipamento">Cadastrar</a>
-          <a class="dropdown-item" href="/codeigniter/equipamento/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>equipamento">Cadastrar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>equipamento/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>equipamento/buscar">Buscar</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -48,8 +47,9 @@
           Fabricante
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/codeigniter/fabricante">Cadastrar</a>
-          <a class="dropdown-item" href="/codeigniter/fabricante/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>fabricante">Cadastrar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>fabricante/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>fabricante/buscar">Buscar</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -57,8 +57,9 @@
           Setor
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/codeigniter/setor">Cadastrar</a>
-          <a class="dropdown-item" href="/codeigniter/setor/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>setor">Cadastrar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>setor/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>setor/buscar">Buscar</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -66,8 +67,9 @@
           Local
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/codeigniter/local">Cadastrar</a>
-          <a class="dropdown-item" href="/codeigniter/local/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>local">Cadastrar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>local/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>local/buscar">Buscar</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -76,8 +78,8 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <!-- <a class="dropdown-item" href="/codeigniter/usuario/">Cadastrar</a> -->
-          <a class="dropdown-item" href="/codeigniter/usuario/listar">Listar</a>
-          <a class="dropdown-item" href="/codeigniter/usuario/logout">Deslogar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>usuario/listar">Listar</a>
+          <a class="dropdown-item" href="<?php echo base_url(); ?>usuario/logout">Deslogar</a>
           
           
         </div>

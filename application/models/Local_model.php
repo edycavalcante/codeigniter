@@ -37,6 +37,31 @@ class Local_model extends CI_Model{
 
 	}
 
+	public function buscar($buscar){
+        
+        $query = $this
+                ->db
+                ->select('*')
+                ->from('local')
+                ->like('nome_local',$buscar)
+                ->get();
+        
+        
+
+        if($query->num_rows()>0)
+        {
+      
+            return $query->result(); 
+            
+        }
+        else
+        {
+     
+            return null;
+            
+        }
+    }
+
 
 }	
 

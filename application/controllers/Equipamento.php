@@ -225,5 +225,30 @@ class Equipamento extends CI_Controller {
 
 	}
 
+	public function buscar(){
+
+		if(is_null($this->input->get('buscar'))){
+		
+		$this->load->view('template/header.php');
+		$this->load->view('template/menu.php');
+        $this->load->view('equipamento/buscar_equipamento.php');  
+        $this->load->view('template/footer.php'); 
+
+	}
+	else{
+		 $data['equipamento']= $this->equipamento_model->buscar($this->input->get('buscar'));
+		 // $data['emprestimo']['url_editar']= site_url(self::$URL_EDITAR);
+		 // $data['emprestimo']['url_excluir'] = site_url(self::$URL_EXCLUIR);
+		
+		 // echo '<pre>';
+		 // echo var_dump($data);
+		 // echo '</pre>';
+		 
+
+        
+        $this->load->view('equipamento/buscar_equipamento1.php',$data);
+	}
+	}
+
 	}
 

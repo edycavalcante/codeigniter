@@ -218,5 +218,31 @@ class Estoque extends CI_Controller {
 
 	}
 
+	public function buscar(){
+
+		if(is_null($this->input->get('buscar'))){
+		
+		$this->load->view('template/header.php');
+		$this->load->view('template/menu.php');
+        $this->load->view('estoque/buscar_estoque.php');  
+        $this->load->view('template/footer.php'); 
+        
+
+	}
+	else{
+		 $data['estoque']= $this->estoque_model->buscar($this->input->get('buscar'));
+		 
+
+
+		 // $data['emprestimo']['url_editar']= site_url(self::$URL_EDITAR);
+		 // $data['emprestimo']['url_excluir'] = site_url(self::$URL_EXCLUIR);
+		
+		 
+        
+        $this->load->view('estoque/buscar_estoque1.php',$data);
+	}
+	}
+
+
 
 }

@@ -70,6 +70,34 @@ class Estoque_model extends CI_Model{
 
 	}
 
+	public function buscar($buscar){
+		
+        $query = $this
+                ->db
+                ->select('*')
+                ->from('estoque_gerencia')
+                ->join('equipamento', 'estoque_gerencia.fk_equipamento_id = equipamento.id_equipamento')->join('local','estoque_gerencia.fk_local_id = local.id_local')
+                ->like('nome_equipamento',$buscar)
+                ->or_like('nome_local', $buscar)
+                ->or_like('patrimonio',$buscar)
+                ->get();
+     	
+     	
+
+        if($query->num_rows()>0)
+        {
+      
+            return $query->result(); 
+            
+        }
+        else
+        {
+     
+            return null;
+            
+        }
+    }
+
 
 }	
 

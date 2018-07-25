@@ -37,6 +37,31 @@ class Setor_model extends CI_Model{
 
 	}
 
+	public function buscar($buscar){
+        
+        $query = $this
+                ->db
+                ->select('*')
+                ->from('setor')
+                ->like('nome_setor',$buscar)
+                ->or_like('responsavel',$buscar)
+                ->get();
+        
+        
+
+        if($query->num_rows()>0)
+        {
+      
+            return $query->result(); 
+            
+        }
+        else
+        {
+     
+            return null;
+            
+        }
+    }
 
 }	
 

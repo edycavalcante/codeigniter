@@ -35,6 +35,30 @@ class Fabricante_model extends CI_Model {
 
     }
 
+    public function buscar($buscar){
+        
+        $query = $this
+                ->db
+                ->select('*')
+                ->from('fabricante')
+                ->like('nome_fabricante',$buscar)
+                ->get();
+        
+        
+
+        if($query->num_rows()>0)
+        {
+      
+            return $query->result(); 
+            
+        }
+        else
+        {
+     
+            return null;
+            
+        }
+    }
         
 
 }
